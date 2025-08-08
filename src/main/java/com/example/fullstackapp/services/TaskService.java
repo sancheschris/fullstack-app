@@ -17,14 +17,15 @@ public class TaskService {
     }
 
     public List<Task> getTasks() {
-        Task task1 = new Task(UUID.randomUUID(), "Sample Task", true);
-        Task task2 = new Task(UUID.randomUUID(), "Another Task", true);
-        Task task3 = new Task(UUID.randomUUID(), "Sample Task", true);
+        if (tasks.isEmpty()) {
+            Task task1 = new Task(UUID.randomUUID(), "Sample Task", true);
+            Task task2 = new Task(UUID.randomUUID(), "Another Task", true);
+            Task task3 = new Task(UUID.randomUUID(), "Sample Task", true);
 
-        tasks.add(task1);
-        tasks.add(task2);
-        tasks.add(task3);
-
+            tasks.add(task1);
+            tasks.add(task2);
+            tasks.add(task3);
+        }
         return tasks;
     }
 
